@@ -1,0 +1,34 @@
+@use 'app/app.scss';
+
+.container {
+    width: 100%;
+    padding: 1rem;
+    @include app.flex-layout(column);
+    gap: 0.5rem;
+    border: 1px solid rgb(var(--base-rgb-grey-light));
+    border-radius: 5px;
+    background-color: white;
+}
+
+.title {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    @include app.flex-layout(row, center, space-between);
+    gap: 0;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.title> :last-child {
+    @include app.text-ellipsis;
+}
+
+.subTitle {
+    margin-bottom: 1rem;
+    color: rgb(var(--base-rgb-grey-medium));
+}
+
+.icon {
+    min-width: var(--icon-size-medium);
+    font-size: var(--icon-size-medium);
+}

@@ -1,0 +1,73 @@
+@use 'app/app.scss';
+
+.header {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    @include app.flex-layout(row, center, space-between);
+    gap: 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid whitesmoke;
+    background-color: white;
+    z-index: 10;
+}
+
+.userBar {
+    position: relative;
+    @include app.flex-layout(row, center);
+}
+
+.iconButton {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.25rem;
+    border-radius: 100%;
+}
+
+.iconButton:hover {
+    background-color: whitesmoke;
+}
+
+.loginButton {
+    height: 2rem;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    border: 1px solid rgb(var(--base-rgb-grey-medium));
+    border-radius: 20px;
+}
+
+.loginButton:hover {
+    background-color: whitesmoke;
+}
+
+.userMenu {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    box-shadow: 0px 0px 2px 2px whitesmoke;
+    background-color: white;
+}
+
+.userMenu>* {
+    width: 100%;
+    padding: 0.5rem;
+    padding-inline: 1rem;
+    justify-content: start;
+    font-size: 0.9rem;
+    border-radius: 0;
+    background-color: white;
+}
+
+.userMenu> *:hover {
+    filter: brightness(0.95);
+}
+
+.userProfileImage {
+    width: 3rem;
+    border-radius: 100%;
+}
+
+.userProfile {
+    @include app.flex-layout(row, center);
+}

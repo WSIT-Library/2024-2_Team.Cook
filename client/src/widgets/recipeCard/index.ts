@@ -1,0 +1,1 @@
+export { DetailCard } from "./ui/detailCard/detailCard";

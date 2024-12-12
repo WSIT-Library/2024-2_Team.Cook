@@ -1,0 +1,31 @@
+.navBar {
+    width: fit-content;
+    height: fit-content;
+    max-height: 100%;
+    display: flex;
+    background-color: white;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .navBar {
+        width: 100%;
+        flex-direction: row;
+        position: fixed;
+        left: 0;
+        bottom: 0px;
+        z-index: 10;
+    }
+
+    .navItem {
+        flex: 1 1;
+        flex-direction: column;
+        gap: 0;
+        border-radius: 0;
+        font-size: 1.25em;
+    }
+
+    .navItem > :last-child {
+        font-size: 0.65em;
+    }
+}

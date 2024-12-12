@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profileButton {
+    width: 3rem;
+    padding: 0.5rem;
+}
+
+.nameBar {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.nameBar>:first-child {
+    font-size: 1rem;
+}
+
+.actionBar {
+    padding-left: 0.5rem;
+    color: grey
+}
+
+.comment {
+    font-size: small;
+}

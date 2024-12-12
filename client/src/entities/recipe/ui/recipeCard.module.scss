@@ -1,0 +1,69 @@
+@use 'app/app.scss';
+
+.cardContainer {
+    max-width: 500px;
+    @include app.flex-layout(column, stretch, stretch, 0);
+    border-bottom: 1px solid rgb(var(--base-rgb-grey-light));
+    overflow: hidden;
+}
+
+.infoBox {
+    padding-inline: 0.5em;
+    padding-bottom: 0.25rem;
+    @include app.flex-layout(column, start, space-between, 0.5em);
+    flex: 1;
+}
+
+.infoHeaderBar {
+    width: 100%;
+    @include app.flex-layout(row, flex-end, stretch, 0.5rem);
+}
+
+.title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 2;
+}
+
+.created_at {
+    white-space: nowrap
+}
+
+.subInfo {
+    @include app.flex-layout(row);
+    flex-wrap: wrap;
+    color: rgb(var(--base-rgb-grey-medium));
+}
+
+.subInfo>* {
+    padding: 0rem;
+}
+
+.subInfo svg {
+    font-size: 1em;
+}
+
+.introduction {
+    height: 5rem;
+    overflow-y: auto;
+}
+
+.chatSection {
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+@media screen and (max-width:767px) {
+    .infoBox {
+        gap: 0;
+    }
+
+    .chatSection {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 0px !important;
+        border: none !important;
+    }
+}
